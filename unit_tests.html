@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+
+<script script type="text/javascript" src="teste_1_mediana.js"></script>
+<script script type="text/javascript" src="teste_2_diferenca.js"></script>
+<script script type="text/javascript" src="teste_3_encriptar.js"></script>
+
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.18.0.css">
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.18.0.js"></script>
+
+  <script>
+    QUnit.module('calculaMedianaImpar', function() {
+     QUnit.test('Buscar mediana de um vetor impar de elementos', function(assert) {
+       assert.equal(calculaMedianaImpar([9, 2, 1, 4, 6]), 4);
+     });
+   });
+ </script>
+
+ <script>
+    QUnit.module('calculaMedianaImpar', function() {
+     QUnit.test('Buscar mediana de um vetor impar de elementos com vetor par de elementos', function(assert) {
+       assert.equal(calculaMedianaImpar([9, 2, 1, 4, 6, 8]), '');
+     });
+   });
+ </script>
+
+  <script>
+    QUnit.module('buscaParPelaDiferenca', function() {
+     QUnit.test('Buscar total de pares pela diferenca dos elementos de um vetor dada a diferenca esperada', function(assert) {
+       assert.equal(buscaParPelaDiferenca([1, 5, 3, 4, 2],2), 3);
+     });
+   });
+ </script>
+
+  <script>
+     QUnit.module('encriptaFrase', function() {
+      QUnit.test('Encriptar frase com um grid do tamanho da raiz', function(assert) {
+        assert.equal(encriptaFrase("tenha um bom dia"), "taoa eum nmd hbi");
+      });
+    });
+  </script>
+
+
+</body>
